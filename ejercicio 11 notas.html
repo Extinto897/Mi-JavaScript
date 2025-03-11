@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje">,,</p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+        let nota = parseFloat(prompt("porfavor Introduce tu nota:"));
+        
+        if (nota < 0 || nota > 4.99) {
+            document.getElementById("mensaje").innerHTML = "la nota introducida no es valida";}
+        else if (nota < 5) { document.getElementById("mensaje").innerHTML = "suspendido"; }
+        else if (nota < 6) { document.getElementById("mensaje").innerHTML = "bien"; }
+        else if (nota < 7) { document.getElementById("mensaje").innerHTML = "bien+"; }
+        else if (nota < 9) { document.getElementById("mensaje").innerHTML = "sobresaliente"; }
+        else if (nota == 10) { document.getElementById("mensaje").innerHTML = "Tu nota es matricula de honor"; }
+        else { document.getElementById("mensaje").innerHTML = "la nota introducida no es valida"; }
+           
+       
+        }
+        
+    </script>
+
+</body>
+</html>

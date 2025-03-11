@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<ht lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje"></p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+            
+        let numero;
+
+        numero= parseFloat(prompt("porfavor Introduce un numero para saber si es multiplo de 5 y 9:"));
+        
+        if (numero % 5 == 0 && numero % 9 == 0) {
+            document.getElementById("mensaje").innerHTML = "El numero " + numero + " es multiplo de 5 y 9";
+        } 
+        else
+         {
+            if(numero % 5 == 0){document.getElementById("mensaje").innerHTML = "El numero " + numero + "  es multiplo de 5"; }
+
+            else if(numero % 9 == 0) {document.getElementById("mensaje").innerHTML = "El numero " + numero + "  es multiplo de 9"; 
+        }
+        }
+        document.getElementById("mensaje").innerHTML = "El numero " + numero + "  no es multiplo de 5 ni de 9";
+    }
+    </script>
+
+</body>
+</html>

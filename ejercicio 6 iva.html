@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje"></p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+
+        let producto, precio, cantidad, total;
+        const iva = 0.21;
+
+         producto = prompt("porfavor Introduce el producto:");
+         precio = parseFloat(prompt("porfavor Introduce el precio:"));
+         cantidad = parseFloat(prompt("porfavor Introduce la cantidad:"));
+
+        let Total = cantidad * precio * (1 + iva);
+        
+       
+        }
+       
+        document.getElementById("mensaje").innerHTML = "El total de comprar" + cantidad  + producto + " es: " + Total;
+      
+
+
+     
+
+    
+    </script>
+
+</body>
+</html>

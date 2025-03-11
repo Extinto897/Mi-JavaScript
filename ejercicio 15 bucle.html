@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje">,,</p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+        let count = 0;
+        let n1 = 1;
+
+        console.log(n1);
+        
+        while (n1 != 0) {           // distinto al numero
+            count++;
+            n1 = parseFloat(prompt("introduce un numero:"));
+
+            if (n1 != 0) count++;
+            console.log(count);
+            document.getElementById("mensaje").innerHTML = "el usuario ha introducido " + count + " numeros";
+
+            
+        }
+        document.getElementById("mensaje").innerHTML = "el usuario ha introducido " + count + " numeros";
+              }
+        
+    </script>
+
+</body>
+</html>

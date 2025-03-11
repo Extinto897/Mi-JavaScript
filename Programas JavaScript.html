@@ -1,0 +1,863 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas JavaScript</title>
+</head>
+<body>
+    <hr>
+    <h3>Te saluda</h3>
+    <button type="button" onclick="miFuncion();">Pulsa aqui</button>
+    <p id="mensaje"></p>
+
+    <hr>
+    <h3>Suma 2 numeros</h3>
+    <button type="button" onclick="miFuncion1();">Pulsa aqui</button>
+    <p id="mensaje1"></p>
+
+    <hr>
+    <h3>calcula de un cuadrado su perímetro y su área</h3>
+    <button type="button" onclick="miFuncion2();">Pulsa aqui</button>
+    <p id="mensaje2"></p>
+
+    <hr>
+    <h3>Calcula la longitud de la circunferencia, su área y el volumen</h3>
+    <button type="button" onclick="miFuncion3();">Pulsa aqui</button>
+    <p id="mensaje3"></p>
+
+    <hr>
+    <h3>Ec2grado</h3>
+    <button type="button" onclick="miFuncion4();">Pulsa aqui</button>
+    <p id="mensaje4"></p>
+
+    <hr>
+    <h3>Minifactura</h3>
+    <button type="button" onclick="miFuncion5();">Pulsa aqui</button>
+    <p id="mensaje5"></p>
+
+    <hr>
+    <h3>Contador</h3>
+    <button type="button" onclick=Suma();">suma 1</button>
+    <button type="button" onclick=Resta();">resta 1</button>
+    <p id="mensaje6"></p>
+
+    <hr>
+    <h3>Par - Impar</h3>
+    <button type="button" onclick="miFuncion7();">Pulsa aqui</button>
+    <p id="mensaje7"></p>
+
+    <hr>
+    <h3>Multiplo de 7</h3>
+    <button type="button" onclick="miFuncion8();">Pulsa aqui</button>
+    <p id="mensaje8"></p>
+
+    <hr>
+    <h3>Multiplo de 5 y 9</h3>
+    <button type="button" onclick="miFuncion9();">Pulsa aqui</button>
+    <p id="mensaje9"></p>
+
+    <hr>
+    <h3>Notas</h3>
+    <button type="button" onclick="miFuncion10();">Pulsa aqui</button>
+    <p id="mensaje10"></p>
+
+    <hr>
+    <h3>Mayor de 3 numeros</h3>
+    <button type="button" onclick="miFuncion11();">Pulsa aqui</button>
+    <p id="mensaje11"></p>
+
+    <hr>
+    <h3>Suma Resta Multiplicacion y Division</h3>
+    <button type="button" onclick="miFuncion12();">Pulsa aqui</button>
+    <p id="mensaje12"></p>
+
+    <hr>
+    <h3> switch con Suma resta multi y division</h3>
+    <button type="button" onclick="miFuncion13();">Pulsa aqui</button>
+    <p id="mensaje13"></p>
+
+    <hr>
+    <h3> cuenta de numero</h3>
+    <button type="button" onclick="miFuncion14();">Pulsa aqui</button>
+    <p id="mensaje14"></p>
+
+    <hr>
+    <h3> cuenta de numero y lo suma</h3>
+    <button type="button" onclick="miFuncion15();">Pulsa aqui</button>
+    <p id="mensaje15"></p>
+
+    <hr>
+    <h3> cuenta pares y impares</h3>
+    <button type="button" onclick="miFuncion16();">Pulsa aqui</button>
+    <p id="mensaje16"></p>
+
+    <hr>
+    <h3> MInifactura completa con tabla</h3>
+    <button type="button" onclick="miFuncion17();">Pulsa aqui</button>
+    <p id="mensaje17"></p>
+
+    <hr>
+    <h3> Numeros del 1 al 100</h3>
+    <button type="button" onclick="miFuncion18();">Pulsa aqui</button>
+    <p id="mensaje18"></p>
+
+    <hr>
+    <h3> Numeros del 100 al 1</h3>
+    <button type="button" onclick="miFuncion19();">Pulsa aqui</button>
+    <p id="mensaje19"></p>
+
+    <hr>
+    <h3> Numeros pares del 50 al 250</h3>
+    <button type="button" onclick="miFuncion20();">Pulsa aqui</button>
+    <p id="mensaje20"></p>
+
+    <hr>
+    <h3> Bucles for</h3>
+    <button type="button" onclick="miFuncion21();">Pulsa aqui</button>
+    <p id="mensaje21"></p>
+
+    <hr>
+    <h3> numeros entre M y N</h3>
+    <button type="button" onclick="miFuncion22();">Pulsa aqui</button>
+    <p id="mensaje22"></p>
+
+    <hr>
+    <h3> Tablas de multiplicar</h3>
+    <button type="button" onclick="miFuncion23();">Pulsa aqui</button>
+    <p id="mensaje23"></p>
+
+    <hr>
+    <h3> Factorial</h3>
+    <button type="button" onclick="miFuncion24();">Pulsa aqui</button>
+    <p id="mensaje24"></p>
+
+    <hr>
+    <h3> Primo</h3>
+    <button type="button" onclick="miFuncion25();">Pulsa aqui</button>
+    <p id="mensaje25"></p>
+
+    <hr>
+    <h3> Primos</h3>
+    <button type="button" onclick="miFuncion26();">Pulsa aqui</button>
+    <p id="mensaje26"></p>
+
+    <hr>
+    <h3> Prmeras funciones</h3>
+    <button type="button" onclick="miFuncion27();">Pulsa aqui</button>
+    <p id="mensaje27"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    function miFuncion() {  /*Pones tu nombre y apellido y te saluda*/
+        let nombre, apellido;
+
+        nombre = prompt("Por favor, introduce tu nombre: ");
+            apellido = prompt("Por favor, introduce tu apellido");
+
+            document.getElementById("mensaje").innerHTML = 
+            "Hola, " + nombre + " " + 
+            apellido + ". ¿Cómo estás?";
+    }
+    
+    function miFuncion1() { /*Suma de dos numeros*/
+        let a, b, suma;
+
+        a = parseFloat(prompt("Por favor, introduce un número: "));
+        b = parseFloat(prompt("Por favor, introduce otro número: "));
+        document.getElementById("mensaje1").innerHTML = a + b;
+    }
+
+    function miFuncion2() { /*calcula de un cuadrado su perímetro y su área*/
+        let lado, perimetro, area;
+
+        lado = parseFloat(prompt("Por favor, introduce un lado del cuadrado: "));
+
+        perimetro = lado * 4;
+        area = lado ** 2;
+
+        document.getElementById("mensaje2").innerHTML = 
+                "Para un cuadrado de lado " + lado + ":<br>" +
+                "  - su perímetro es: " + perimetro + ".<br>" +
+                "  - su área es: " + area + ".";
+        }
+
+    function miFuncion3() {  /*Calcula la longitud de la circunferencia, su área y el volumen*/
+
+let radio, long, area, vol1, vol2;
+const PI = 3.141592;
+
+radio = parseFloat(prompt("Por favor, introduce el radio de un círculo: "));
+
+            long = 2 * PI * radio;
+            area = PI * (radio ** 2);
+
+            vol1 = (4 * PI * (radio ** 3)) / 3;
+            vol2 = (4/3) * Math.PI * (radio ** 3); Math.PI;
+            
+            document.getElementById("mensaje3").innerHTML = 
+                "Para un círculo de radio " + radio + ":<br>" +
+                "  - su perímetro es: " + long + ".<br>" +
+                "  - su área es: " + area + ".<br>" +
+                "  - su volumen 1 es: " + vol1 + ".<br>" +
+                "  - su volumen 2 es: " + vol2 + ".";
+        }
+
+    function miFuncion4() { /*Ec2grado*/
+
+
+let a, b, c, x1, x2;
+
+a = parseFloat(prompt("Por favor, introduce el coeficiente A: "));
+b = parseFloat(prompt("Por favor, introduce el coeficiente B: "));
+c = parseFloat(prompt("Por favor, introduce el coeficiente C: "));
+
+
+x1 = (-b + Math.sqrt(b**2 - (4 * a * c))) / (2 * a);
+
+
+let radicando = b**2 - (4 * a * c);
+let raiz = Math.sqrt(radicando);
+let numerador = -b - raiz;
+let denominador = 2 * a;
+x2 = numerador / denominador;
+
+document.getElementById("mensaje4").innerHTML = 
+    "Para esta ecuación de segundo grado: " + a + "x<sup>2</sup> + " + b + "x + " + c + " = 0<br>" +
+    "sus soluciones son:<br>" +
+    "x1 = " + x1 + ".<br>" +
+    "x2 = " + x2;
+}
+
+    function miFuncion5() { /*Minifactura*/
+            let articulo, cantidad, precio, total;
+            const iva = 0.21;
+
+            articulo = prompt("Introduce el nombre del artículo: ");
+            cantidad = parseInt(prompt("Introduce la cantidad: "));
+            precio   = parseFloat(prompt("Introduce el precio: "));
+
+            
+            total = cantidad * precio * (1 + iva);
+
+            document.getElementById("mensaje5").innerHTML = 
+                "El total de comprar " + cantidad + " de " + articulo +
+                " a " + precio + " la unidad es: " + total;
+        }
+
+    function Suma() {  /*Contador parte suma*/
+           
+            contador++;
+            sumas++;
+            console.log("El contador vale: " + contador);
+            console.log("Has sumado  " + sumas + " veces.");
+           
+
+            document.getElementById("mensaje6").innerHTML = 
+                "De momento has pulsado " + contador + " veces el botón.";
+        }
+
+    function Resta() { /*Contador parte resta*/
+            contador--;
+            restas++;
+            console.log("El contador vale: " + contador);
+            console.log("Has restado  " + restas + " veces.");
+           
+
+            document.getElementById("mensaje6").innerHTML = 
+                "De momento has pulsado " + contador + " veces el botón.";
+        }
+
+    function miFuncion7() { /*Par Impar*/
+            let num = parseInt(prompt("Introduce un número para saber si es par o impar: "))
+            let resto;
+
+            // Versión 1 
+            resto = num % 2;
+
+            if (resto == 0) {
+                document.getElementById("mensaje7").innerHTML = 
+                    "El número " + num + " es PAR.";
+            } else {
+                document.getElementById("mensaje7").innerHTML = 
+                    "El número " + num + " es IMPAR.";
+            }
+        }
+
+    function miFuncion8() { /*Multiplo de 7*/
+            let num = parseInt(prompt("Introduce un número para saber si es par o impar: "));
+
+            if (num % 7 == 0) {
+                document.getElementById("mensaje8").innerHTML = 
+                    "El número " + num + " es múltiplo de 7.";
+            } else {
+                document.getElementById("mensaje8").innerHTML = 
+                    "El número " + num + " NO es múltiplo de 7.";
+            }
+        }
+
+    function miFuncion9() { /*Multiplo de 5 y 9*/
+            let num = parseInt(prompt("Introduce un número para saber si es par o impar: "))
+
+            // Versión 1
+            if (num % 5 == 0 && num % 9 == 0) {
+                document.getElementById("mensaje9").innerHTML = 
+                    "El número " + num + " es múltiplo de 5 y 9.";
+            } else {
+                if (num % 5 == 0) {
+                    document.getElementById("mensaje9").innerHTML = 
+                    "El número " + num + " es múltiplo de 5.";
+                } else if (num % 9 == 0) {
+                    document.getElementById("mensaje9").innerHTML = 
+                    "El número " + num + " es múltiplo de 9.";
+                } else {
+                    document.getElementById("mensaje9").innerHTML = 
+                    "El número " + num + " NO es múltiplo de 5 ni de 9.";
+                }
+            }
+        }
+
+    function miFuncion10() { /*Notas*/
+            let nota = parseFloat(prompt("Por favor, introduce una nota: "));
+
+            
+            if (nota < 0 || nota > 10) 
+            {
+                document.getElementById("mensaje10").innerHTML = 
+                    "La nota introducida es incorercta. Debes introducir una nota entre el 0 y el 10.";
+            } 
+        
+            else if (nota < 5) 
+            { 
+                document.getElementById("mensaje10").innerHTML = 
+                    "El alumno está SUSPENDIDO.";
+            } else if (nota < 6) {
+                document.getElementById("mensaje10").innerHTML = 
+                    "El alumno ha sacado un SUFICIENTE.";
+            } else if (nota < 7) {
+                document.getElementById("mensaje10").innerHTML = 
+                    "El alumno ha sacado un BIEN.";
+            } else if (nota < 8.5) {
+                document.getElementById("mensaje10").innerHTML = 
+                    "El alumno ha sacado un NOTABLE.";
+            } else if (nota < 10) {
+                document.getElementById("mensaje10").innerHTML = 
+                    "El alumno ha sacado un SOBRESALIENTE.";
+            } 
+          
+                document.getElementById("mensaje10").innerHTML = 
+                    "El alumno ha sacado una MATRICULA DE HONOR.";
+            }
+        
+    function miFuncion11() { /*Mayor de 3 numeros*/
+            let a = parseFloat(prompt("Por favor, introduce un número: "));
+            let b = parseFloat(prompt("Por favor, introduce otro número: "));
+            let c = parseFloat(prompt("Por favor, introduce el último número: "));
+
+           
+            if (a >= b && a >= c) 
+            {
+                document.getElementById("mensaje11").innerHTML = 
+                    "El mayor de " + a + ", " + b + " y " + c + "es: " + a;
+            } 
+          
+            else if (b >= a && b >= c) 
+            {
+                document.getElementById("mensaje11").innerHTML = 
+                    "El mayor de " + a + ", " + b + " y " + c + "es: " + b;
+            } 
+            else if (c >= a && c >= b) 
+            {
+                document.getElementById("mensaje11").innerHTML = 
+                    "El mayor de " + a + ", " + b + " y " + c + "es: " + c;
+            }             
+            else //if (a >= b && a >= c) 
+            {
+                document.getElementById("mensaje11").innerHTML = 
+                    "Ha sucedido un error inesperado";
+            }       
+        }
+
+    function miFuncion12() { /*Suma resta multi y division*/
+            let opcion = parseInt(prompt("\nPor favor, introduce la opción que desees:\n\n1.- Sumar\n2.- Restar\n3.- Multiplicar\n4.- Dividir\n"));
+            
+            console.log(opcion);
+            
+           
+            if (opcion == 1) 
+            {
+                let a = parseFloat(prompt("Por favor, introduce un número: "));
+                let b = parseFloat(prompt("Por favor, introduce otro número: "));
+            
+                document.getElementById("mensaje12").innerHTML = 
+                    "La suma de " + a + " + " + b + " es:  " + (a+b);
+            } 
+          
+            else if (opcion == 2) 
+            {
+                let a = parseFloat(prompt("Por favor, introduce un número: "));
+                let b = parseFloat(prompt("Por favor, introduce otro número: "));
+            
+                document.getElementById("mensaje12").innerHTML = 
+                    "La resta de " + a + " - " + b + " es:  " + (a-b);
+            } 
+           
+            else if (opcion == 3) 
+            {
+                let a = parseFloat(prompt("Por favor, introduce un número: "));
+                let b = parseFloat(prompt("Por favor, introduce otro número: "));
+            
+                document.getElementById("mensaje12").innerHTML = 
+                    "La multiplicación de " + a + " * " + b + " es:  " + (a*b);
+            }   
+                  
+            else if (opcion == 4) 
+            {
+                let a = parseFloat(prompt("Por favor, introduce un número: "));
+                let b = parseFloat(prompt("Por favor, introduce otro número: "));
+            
+                document.getElementById("mensaje12").innerHTML = 
+                    "La división de " + a + " / " + b + " es:  " + (a/b);
+            } else {
+                document.getElementById("mensaje12").innerHTML = 
+                    "La opción introducida es incorrecta. Introduce un valor de 1 a 4.";
+            }             
+        }
+
+    function miFuncion13() { /*switch con Suma resta multi y division*/
+            let opcion = parseInt(prompt("\nPor favor, introduce la opción que desees:\n\n1.- Sumar\n2.- Restar\n3.- Multiplicar\n4.- Dividir\n5.- Raiz cuadrada\n\n"));
+            
+            console.log(opcion);
+            
+            let a, b;
+
+            switch (opcion) {
+                
+                case 1:
+                    a = parseFloat(prompt("Por favor, introduce un número: "));
+                    b = parseFloat(prompt("Por favor, introduce otro número: "));
+                
+                    document.getElementById("mensaje13").innerHTML = 
+                        "La suma de " + a + " + " + b + " es:  " + (a+b);
+
+                    break;
+
+                
+                case 2:
+                    a = parseFloat(prompt("Por favor, introduce un número: "));
+                    b = parseFloat(prompt("Por favor, introduce otro número: "));
+                
+                    document.getElementById("mensaje13").innerHTML = 
+                        "La resta de " + a + " - " + b + " es:  " + (a-b);
+            
+                    break;
+               
+                case 3:
+                    a = parseFloat(prompt("Por favor, introduce un número: "));
+                    b = parseFloat(prompt("Por favor, introduce otro número: "));
+                
+                    document.getElementById("mensaje13").innerHTML = 
+                        "La multiplicación de " + a + " * " + b + " es:  " + (a*b);
+        
+                    break;
+            
+                          
+                case 4:
+                    a = parseFloat(prompt("Por favor, introduce un número: "));
+                    b = parseFloat(prompt("Por favor, introduce otro número: "));
+                
+                    document.getElementById("mensaje13").innerHTML = 
+                        "La división de " + a + " / " + b + " es:  " + (a/b);
+
+                    break;
+
+                          
+                case 5:
+                    a = parseFloat(prompt("Por favor, introduce un número: "));
+                
+                    document.getElementById("mensaje13").innerHTML = 
+                        "La raiz cuadrada de " + a + " es:  " + (Math.sqrt(a));
+
+                    break;
+
+                default:
+                    document.getElementById("mensaje13").innerHTML = 
+                        "La opción introducida es incorrecta. Introduce un valor de 1 a 5.";
+            }             
+        }
+
+    function miFuncion14() { /*Cuenta de numeros*/
+            let cont = 0;
+            let num = parseInt(prompt("\nPor favor, introduce un número"));
+            
+            console.log(num);
+            
+            // Mientras el número no sea 0
+            while (num != 0) {
+                cont++; // Incrementamos en 1 el valor de la variable cont
+                console.log(cont);
+
+                num = parseInt(prompt("\nPor favor, introduce un número"));
+            }
+            
+            document.getElementById("mensaje14").innerHTML = 
+                "El usuario ha introducido " + cont + " números.";
+
+        }
+
+    function miFuncion15() { /*Cuenta los numero y los suma*/
+            let cont = 0, sum = 0;
+            let num = parseInt(prompt("\nPor favor, introduce un número"));
+            
+            console.log(num);
+            
+            while (num != 0) {
+                cont++;
+                
+                // Vamos acumulando (sumatorio) de los números introducidos
+                //sum = sum + num;
+                sum += num;
+                
+                // Resultados parciales por consola
+                console.log("Contador = " + cont);
+                console.log("De momento, llevamos sumado: " + sum);
+
+                num = parseInt(prompt("\nPor favor, introduce un número"));
+            }
+            
+            document.getElementById("mensaje15").innerHTML = 
+                "El usuario ha introducido " + cont + " números. La suma de todos ellos es: " + sum;
+
+
+        }
+
+    function miFuncion16() { /*Cuenta pares y imares*/
+            let cont = 0,   // Cuenta los números totales introducidos
+                sum = 0,    // Suma todos los números introducidos
+                pares = 0,  // Cuenta los pares
+                impares = 0;// Cuenta los impares
+
+            let num = parseInt(prompt("\nPor favor, introduce un número"));
+            
+            console.log(num);
+            
+            while (num != 0) {
+                cont++;
+                
+                //sum = sum + num;
+                sum += num;
+                /*
+                if (num % 2 == 0)   
+                    pares++; 
+                else                
+                    impares++;
+                */
+                (num % 2 == 0)?pares++:impares++;
+
+                console.log("Contador = " + cont);
+                console.log("De momento, llevamos sumado: " + sum);
+
+                num = parseInt(prompt("\nPor favor, introduce un número"));
+            }
+            
+            document.getElementById("mensaje16").innerHTML = 
+                "El usuario ha introducido " + cont + " números. La suma de todos ellos es: " + sum + ". Pares: " + pares + ". Impares: " + impares;
+        }
+
+    function miFuncion17() { /*Minifactura completa con tabla*/
+            let articulo, cantidad, precio, total, total_final = 0, opcion, iva, 
+                mensaje = "<table><tr><th>Artículo</th><th>Cantidad</th><th>Precio</th><th>IVA</th><th>Total</th></tr>";
+
+            do {
+                articulo = prompt("Introduce el nombre del artículo: ");
+                cantidad = parseInt(prompt("Introduce la cantidad: "));
+                precio   = parseFloat(prompt("Introduce el precio: "));
+
+                opcion = prompt("¿Qué tipo de IVA hay que cargar?\n1.- Normal: 21%\n2.- Reducido: 10%\n3.- Superreducido: 4%\n");
+                switch (opcion) {
+                    case "1":
+                        iva = 0.21;
+                        break;
+                    case "2":
+                        iva = 0.10;
+                        break;
+                    case "3":
+                        iva = 0.04;
+                        break;
+                    default:       
+                        iva = 0.21;
+                }
+
+                total = cantidad * precio * (1 + iva);
+                total_final += total;
+
+                mensaje += "<tr><td>" + articulo + "</td><td>" + cantidad + "</td><td>" + precio + "</td><td>" + iva + "</td><td>" + (Math.round(total * 100) / 100) + "€</td></tr>"
+
+                opcion = prompt("¿Quieres introducir más artículos? (S/N)");
+            } while(opcion == "S" || opcion == "s");
+
+            mensaje += "<tr><td colspan='4'>Total</td><td>" + (Math.round(total_final * 100) / 100) + "€</td></tr></table>";
+            
+            document.getElementById("mensaje17").innerHTML = mensaje;
+        }
+
+    function miFuncion18() { /*Numeros del 1 al 100*/
+            let mensaje = "", i;
+
+            // Valor inicial de i
+            i = 1;
+
+            // Condición de parada
+            while (i <= 100) {
+                // mensaje += i + ", ";
+                mensaje += i + "<br>";                
+                // Incrementos el valor de i
+                i++;
+                // i = i + 1;
+                // i += 1;
+            }
+
+            document.getElementById("mensaje18").innerHTML = mensaje;
+        }
+
+    function miFuncion19() { /*Numeros del 100 al 1*/
+            let mensaje = "", i;
+
+            // Valor inicial de i
+            i = 100;
+
+            // Condición de parada
+            while (i >= 1) {
+                // mensaje += i + ", ";
+                mensaje += i + "<br>";                
+
+                // Incrementos el valor de i
+                i--;
+            }
+
+            document.getElementById("mensaje19").innerHTML = mensaje;
+        }
+
+    function miFuncion20() { /*Numeros pares del 50 al 250*/
+            let mensaje = "", i;
+
+            // Valor inicial de i
+            i = 50;
+
+            // Condición de parada
+            while (i <= 250) {
+                // mensaje += i + ", ";
+                mensaje += i + "<br>";                
+
+                // Incrementos el valor de i
+                i += 2;
+            }
+
+            // Imprimimos el mensaje en pantalla
+            document.getElementById("mensaje20").innerHTML = mensaje;
+        }
+
+    function miFuncion21() { /*Bucle for*/
+            let mensaje = "", i;
+
+            // Recorre los números entre el 1 y el 100 de 1 en 1
+            for (i = 1; i <= 100; i++) {
+                mensaje += i + ", ";
+            }
+
+            mensaje += "<br><hr><br>";
+
+            // Recorre los números entre el 100 y el 1 decrecientemente
+            for (i = 100; i >= 1; i--) 
+                mensaje += i + ", ";
+
+            mensaje += "<br><hr><br>";
+
+            // Números pares entre el -50 y el 50
+            // Hacemos un incremento de 2 en cada vuelta
+            for (i = -50; i <= 50; i += 2) 
+                mensaje += i + ", ";
+
+            mensaje += "<br><hr><br>";
+
+            // Números pares entre el -50 y el 50
+            // Incrementamos de 1 en 1 y preguntamos en cada vuelta si es múltiplo
+            for (i = -50; i <= 50; i++) {
+                if (i % 2 == 0) {
+                    mensaje += i + ", ";
+                }
+            }
+            mensaje += "<br><hr><br>";
+
+            // Recorre los números múltiplos de 5 entre el 127 y el 258
+            // Los recorremos todos de 1 en 1 y preguntamos si es múltiplo
+            for (i = 127; i <= 258; i++) {
+                if (i % 5 == 0) {
+                    mensaje += i + ", ";
+                }
+            }
+            mensaje += "<br><hr><br>";
+
+            // Recorre los números múltiplos de 5 entre el 127 y el 258
+            // Ajusto el primer número de la serie a un múltiplo de 5 e incrementamos de 5 en 5
+            for (i = 130; i <= 258; i += 5) {
+                if (i % 5 == 0) {
+                    mensaje += i + ", ";
+                }
+            }
+
+            mensaje += "<br><hr><br>";
+
+            // Mostramos el mensaje por pantalla
+            document.getElementById("mensaje21").innerHTML = mensaje;
+        }
+
+    function miFuncion22() { /*Numeros entre M y N*/
+            let mensaje = "", i;
+
+            let m = parseInt(prompt("Introduce un número: "));
+            let n = parseInt(prompt("Introduce otro número: "));
+
+            // Calculamos el mayor y el menor
+            if (m > n) {
+                mayor = m;
+                menor = n;
+            }
+            else {
+                mayor = n;
+                menor = m;
+            }
+
+            // Recorre los números entre el 1 y el 100 de 1 en 1
+            for (i = menor; i <= mayor; i++) {
+                mensaje += i + ", ";
+            }
+            // Mostramos el mensaje por pantalla
+            document.getElementById("mensaje22").innerHTML = mensaje;
+        }
+
+    function miFuncion23() { /*Tablas de multiplicar*/
+            let mensaje = "", tabla, fila;
+
+            for (tabla = 0; tabla <= 10; tabla++) {
+
+                // Este mensaje se guarda una vez para cada tabla, antes de ella
+                mensaje += "Tabla del " + tabla + "<br>---------------------------<br>";
+                
+                for (fila = 0; fila <= 10; fila++) {
+                    mensaje += tabla + " x " + fila + " = " + (tabla*fila) + "<br>";
+                }
+
+                // Este mensaje se guarda para cada tabla, al final de ella
+                mensaje += "<br><br>";
+            }
+            // Mostramos el mensaje por pantalla
+            document.getElementById("mensaje23").innerHTML = mensaje;
+        }
+
+    function miFuncion24() { /*Factorial*/
+            let i, num, fact = 1;
+
+            num = parseInt(prompt("Introduce un número para calcular su factorial: "));
+
+            for (i = 1; i <= num; i++) 
+                fact *= i;
+            
+            // Mostramos el mensaje por pantalla
+            document.getElementById("mensaje24").innerHTML = fact;
+        }
+
+    function miFuncion25() { /*Primo*/
+            let mensaje = "";
+            let num = parseInt(prompt("Introduce un número para calcular su factorial: "));
+            let primo = true;
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    primo = false;
+                    break;
+                } 
+            } 
+            
+            if (primo)
+                mensaje = "El número " + num + " es PRIMO!! :D";
+            else
+                mensaje = "El número " + num + " No es primo :(";
+            
+            // Mostramos el mensaje por pantalla
+            document.getElementById("mensaje25").innerHTML = mensaje;
+        }
+
+    function miFuncion26() { /*Primos*/
+            let mensaje = "";
+            let num, i;
+            let primo = true;
+
+            for (num = 2; num <= 100000; num++) {
+                primo = true;
+                for (i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i == 0) {
+                        primo = false;
+                        break;
+                    } 
+                } 
+                
+                if (primo)
+                    mensaje += num + ", ";
+            }
+
+
+            
+            // Mostramos el mensaje por pantalla
+            document.getElementById("mensaje26").innerHTML = mensaje;
+        }
+
+    function miFuncion27() { /*Primeras funciones*/
+            let n1, n2, n3, resultado;
+            n1 = parseFloat(prompt("Introduce el primer número: "));
+            n2 = parseFloat(prompt("Introduce el segundo número: "));
+            n3 = parseFloat(prompt("Introduce el tercer número: "));
+
+            resultado = mayor3numeros(n1, n2, n3);
+
+            ec2grado(n1, n2, n3);       
+
+            // Mostramos el mensaje por pantalla
+            document.getElementById("mensaje27").innerHTML = "El mayor entre " + n1 + ", " + n2 + " y " + n3 + " es: " + resultado;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>

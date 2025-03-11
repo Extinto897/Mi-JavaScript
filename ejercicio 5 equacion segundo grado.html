@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje"></p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+/*este probrama resuelve ecuaciones de segundo grado*/
+// ax2 + bx
+
+        let a, b, c;
+        
+
+         a= parseFloat(prompt("porfavor Introduce el coeficiente a:"));
+         b= parseFloat(prompt("porfavor Introduce el coeficiente b:"));
+         c= parseFloat(prompt("porfavor Introduce el coeficiente c:"));
+
+        let radicando = b**2 - (4 * a * c);
+        let raiz = Math.sqrt(radicando);
+        let numerador =-b - raiz;
+        let denominador = 2 * a;
+        x2 = numerador / denominador;
+
+        x1 = (-b + Math.sqrt(b**2 - (4 * a *c))) / (2 * a);
+        x2 = (-b - raiz) / (2 * a);
+        
+        document.getElementById("mensaje").innerHTML = "para esta ecuacion de segundo grado: " + a + "x<sup>2</sup> +" + b + "x + " + c + " = 0<br>" + "sus soluciones son: <br>" + "x1 = " + x1 + "<br>" + "x2 = " + x2;
+      
+        }
+
+    </script>
+
+</body>
+</html>

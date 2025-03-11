@@ -1,0 +1,128 @@
+<html lang="es">
+<head>
+
+<style>
+    
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6773aa;
+}
+
+form {
+  padding: 50px 55px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+  background-color: #737fb2;
+}
+
+form h2 {
+  color: #14f9a6;
+  font-size: 25px;
+}
+
+.form-txt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-txt a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.form-txt a:hover {
+  color: #14f9a6;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  background-color: #818ec6;
+  padding: 20px 14px;
+  margin-bottom: 25px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+::placeholder {
+  color: #bfc9f3;
+  font-size: 15px;
+}
+
+:focus {
+  outline: 1px solid #14f9a6;
+}
+
+.btn {
+  background-color: #14f9a6;
+  color: #146d31;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #14ea9b;
+}
+
+@media (max-width: 991px) {
+  body {
+    padding: 30px;
+  }
+  form {
+    width: 100%;
+  }
+}
+</style>>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <form action="https://formsubmit.co/andersonbatistamateo@gmail.com" method="POST" autocomplete="off">
+    <h2>Contacto</h2>
+    <div class="form-txt">
+      <a href="#">Politicas de privacidad</a>
+      <a href="#">Terminos y condiciones</a>
+    </div>
+    <div class="input-group">
+
+      <input type="text" name="name" placeholder="Nombre">
+
+      <input type="tel" name="phone" placeholder="Telefono">
+
+      <input type="email" name="email" placeholder="Email">
+
+      <textarea name="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+
+      <input class="btn" type="submit" value="Enviar">
+
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+
+      <input type="hidden" name="_captcha" value="false">
+
+    </div>
+
+  </form>
+
+</body>
+
+</html>

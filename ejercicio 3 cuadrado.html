@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje"></p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+        let lado, perimetro, area;
+
+       lado = parseFloat(prompt("porfavor Introduce el lado del cuadrado"));
+
+       perimetro = lado * 4;
+       area = lado ** 2;
+
+        document.getElementById("mensaje").innerHTML = "para un cuadrado de un lado" + lado + ":<br>" + " - su parametro es: " + perimetro + "<br>" + " - su area es: " + area;
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

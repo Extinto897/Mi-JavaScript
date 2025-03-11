@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje"></p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+        let radio, long, area, vol;
+        const PI = 3.1416;
+
+        radio = parseFloat(prompt("porfavor Introduce el radio de un circulo:"));
+
+        long = 2 * PI * radio;
+        area = PI * (radio ** 2);
+        vol = (4 * PI * (radio ** 3)) / 3;
+        vol = (4/3) * PI * (radio ** 3);
+
+        document.getElementById("mensaje").innerHTML = "para un cuadrado de un radio " + radio + ":<br>" + " - su longitud es: " + long + "<br>" + " - su area es: " + area + ":<br>" + " - su volumen es: " + vol;
+        }
+
+    </script>
+
+</body>
+</html>

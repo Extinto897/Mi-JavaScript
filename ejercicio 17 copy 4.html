@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> sacar los numeros que pida el usurio entre  </h1>
+    <hr>
+    <button type="button" onclick="miFuncion()">Calcula la fcatura</button>
+    <p id="mensaje"></p>
+    <script>
+        function miFuncion() {
+          let m, n, i, mensaje = "";
+          m = parseInt(prompt("Introduce el primer numero"));   
+          n = parseInt(prompt("Introduce el segundo numero"));
+           
+          for(i = m; i <=n; i++)
+              mensaje += i + "<br>";
+          
+        document.getElementById("mensaje").innerHTML = mensaje;
+
+        }
+    </script>
+</body>
+</html>

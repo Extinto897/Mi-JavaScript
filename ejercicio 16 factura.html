@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="miFuncion()">Calcula la fcatura</button>
+    <hr>
+    <p id="mensaje"></p>
+    <script>
+        
+        
+
+
+    function miFuncion() {
+
+        let producto, precio, cantidad, opcion, mensaje  = "", Total_final = 0, iva, Total;
+
+        do {
+         producto = prompt("porfavor Introduce el producto:");
+         precio = parseFloat(prompt("porfavor Introduce el precio:"));
+         cantidad = parseFloat(prompt("porfavor Introduce la cantidad:"));
+
+         opcion = prompt("que tipo de IVA quieres cargar?\n1.normal 21%\\2.reducido 10%\\3.superreducido 4%");
+            switch (opcion) {
+            case "1":
+                iva = 0.21;
+                break;
+            case "2":
+                iva = 0.10;
+                break;
+            case "3":
+                iva = 0.04;
+                break;
+            default:
+                iva = 0.21;
+                break;
+            }
+            Total = cantidad * precio * (1 + iva);
+            Total_final = Total_final + Total;
+            document.getElementById("mensaje").innerHTML += "El total de " + cantidad + " unidades de " + producto + " con su iva " + (iva * 100) + "% es: " + Total + " €" + "<br>";
+
+            opcion = prompt("¿Quieres hacer otra operación? S/N");
+        } 
+        while (opcion == "S" || opcion == "s");
+        document.getElementById("mensaje").innerHTML += "<br><em>El total de la factura es: " + Total_final + " €</em>";
+    }
+    
+       
+
+        
+    </script>
+</body>

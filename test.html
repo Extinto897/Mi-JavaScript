@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas de Multiplicar con Colores</title>
+    <style>
+        /* Estilos para las tablas */
+        .tabla {
+            display: inline-block;
+            margin: 15px;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        .tabla th, .tabla td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .tabla th {
+            color: white;
+            font-weight: bold;
+        }
+        .tabla td {
+            background-color: #f9f9f9; /* Fondo claro para celdas */
+        }
+        .tabla tr:nth-child(even) td {
+            background-color: #e9ecef; /* Color alternado para filas pares */
+        }
+
+        /* Colores únicos para el encabezado de cada tabla */
+        .tabla-1 th { background-color: #e63946; } /* Rojo */
+        .tabla-2 th { background-color: #f4a261; } /* Naranja */
+        .tabla-3 th { background-color: #e9c46a; } /* Amarillo */
+        .tabla-4 th { background-color: #2a9d8f; } /* Verde azulado */
+        .tabla-5 th { background-color: #264653; } /* Azul oscuro */
+        .tabla-6 th { background-color: #8338ec; } /* Púrpura */
+        .tabla-7 th { background-color: #3a86ff; } /* Azul claro */
+        .tabla-8 th { background-color: #ff006e; } /* Rosa */
+        .tabla-9 th { background-color: #06d6a0; } /* Verde claro */
+        .tabla-10 th { background-color: #7209b7; } /* Morado */
+    </style>
+</head>
+<body>
+    <div id="contenedor"></div>
+
+    <script>
+        // Obtener el contenedor donde se insertarán las tablas
+        const contenedor = document.getElementById("contenedor");
+
+        // Generar las tablas de multiplicar del 1 al 10
+        for (let numero = 1; numero <= 10; numero++) {
+            // Crear la tabla HTML con una clase única para cada número
+            let tablaHTML = `
+                <table class="tabla tabla-${numero}">
+                    <tr>
+                        <th colspan="2">Tabla del ${numero}</th>
+                    </tr>
+                    <tr>
+                        <th>Operación</th>
+                        <th>Resultado</th>
+                    </tr>
+            `;
+
+            // Añadir las filas de la tabla
+            for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+                let resultado = numero * multiplicador;
+                tablaHTML += `
+                    <tr>
+                        <td>${numero} × ${multiplicador}</td>
+                        <td>${resultado}</td>
+                    </tr>
+                `;
+            }
+
+            // Cerrar la tabla
+            tablaHTML += `</table>`;
+
+            // Insertar la tabla en el contenedor
+            contenedor.innerHTML += tablaHTML;
+        }
+    </script>
+</body>
+</html>

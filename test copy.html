@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tecnología - Estilo PCComponentes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #ff6200;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal */
+        .main-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Sección de productos */
+        .productos-destacados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .producto {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .producto:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .producto h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .producto .precio {
+            font-size: 20px;
+            color: #ff6200;
+            font-weight: bold;
+        }
+
+        .producto button {
+            background-color: #ff6200;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .producto button:hover {
+            background-color: #e55a00;
+        }
+
+        /* Carrito */
+        .carrito {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carrito h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ff6200;
+        }
+
+        .carrito ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .carrito ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .carrito .total {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .carrito .botones {
+            display: flex;
+            gap: 10px;
+        }
+
+        .carrito button {
+            background-color: #ff6200;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .carrito button:hover {
+            background-color: #e55a00;
+        }
+
+        .carrito #limpiar-carrito {
+            background-color: #666;
+        }
+
+        .carrito #limpiar-carrito:hover {
+            background-color: #555;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ff6200;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav ul {
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .productos-destacados {
+                grid-template-columns: 1fr;
+            }
+
+            .carrito {
+                width: 100%;
+                left: 0;
+                right: 0;
+                top: auto;
+                bottom: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">TechStore</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1>Productos Destacados</h1>
+        <div class="productos-destacados">
+            <div class="producto" data-nombre="Monitor LED 27"" data-precio="199.99">
+                <img src="https://via.placeholder.com/200x150" alt="Producto 1">
+                <h3>Monitor LED 27"</h3>
+                <p class="precio">199,99 €</p>
+                <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+            </div>
+            <div class="producto" data-nombre="Teclado Mecánico RGB" data-precio="89.99">
+                <img src="https://via.placeholder.com/200x150" alt="Producto 2">
+                <h3>Teclado Mecánico RGB</h3>
+                <p class="precio">89,99 €</p>
+                <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+            </div>
+            <div class="producto" data-nombre="Ratón Gaming" data-precio="49.99">
+                <img src="https://via.placeholder.com/200x150" alt="Producto 3">
+                <h3>Ratón Gaming</h3>
+                <p class="precio">49,99 €</p>
+                <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+            </div>
+            <div class="producto" data-nombre="SSD 1TB" data-precio="129.99">
+                <img src="https://via.placeholder.com/200x150" alt="Producto 4">
+                <h3>SSD 1TB</h3>
+                <p class="precio">129,99 €</p>
+                <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="carrito">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p class="total">Total: <span id="total-carrito">0,00 €</span></p>
+        <div class="botones">
+            <button id="comprar-ahora">Comprar ahora</button>
+            <button id="limpiar-carrito">Limpiar carrito</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 TechStore. Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+    </footer>
+
+    <script>
+        let carrito = [];
+        const listaCarrito = document.getElementById('lista-carrito');
+        const totalCarrito = document.getElementById('total-carrito');
+        const comprarAhoraBtn = document.getElementById('comprar-ahora');
+        const limpiarCarritoBtn = document.getElementById('limpiar-carrito');
+
+        function agregarAlCarrito(boton) {
+            const producto = boton.parentElement;
+            const nombre = producto.getAttribute('data-nombre');
+            const precio = parseFloat(producto.getAttribute('data-precio'));
+
+            // Añadir producto al carrito
+            carrito.push({ nombre, precio });
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            // Limpiar lista del carrito
+            listaCarrito.innerHTML = '';
+
+            // Añadir elementos al carrito
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} - ${item.precio.toFixed(2)} €`;
+                listaCarrito.appendChild(li);
+            });
+
+            // Calcular y mostrar total
+            const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+            totalCarrito.textContent = `${total.toFixed(2)} €`;
+        }
+
+        // Evento para "Comprar ahora"
+        comprarAhoraBtn.addEventListener('click', () => {
+            if (carrito.length === 0) {
+                alert('El carrito está vacío. Añade productos antes de comprar.');
+            } else {
+                alert('¡Gracias por tu compra! Total: ' + totalCarrito.textContent);
+                // Aquí podrías añadir lógica para redirigir a una página de pago
+            }
+        });
+
+        // Evento para "Limpiar carrito"
+        limpiarCarritoBtn.addEventListener('click', () => {
+            carrito = [];
+            actualizarCarrito();
+        });
+    </script>
+</body>
+</html>

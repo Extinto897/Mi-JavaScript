@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Ejercicio 12 - Mayor de 3 números</title>
+</head>
+<but>
+    <h1>Ejercicio 12: programa para saber el numero mayor de 3 numeros.</h1>
+    <hr>
+    <button type="button" onclick="miFuncion()">Mayor de 3 números</button>
+    <hr>
+    <p id="mensaje"></p>
+    <hr>
+    <button type="button" onclick="miFuncion1()">ec2grado</button>
+
+    <script>
+        function miFuncion() {
+            let a = parseFloat(prompt("Por favor, introduce un número: "));
+            let b = parseFloat(prompt("Por favor, introduce otro número: "));
+            let c = parseFloat(prompt("Por favor, introduce el último número: "));
+
+          
+            if (a >= b && a >= c) 
+            {
+                document.getElementById("mensaje").innerHTML = 
+                    "El mayor de " + a + ", " + b + " y " + c + "es: " + a;
+            } 
+           
+            else if (b >= a && b >= c) 
+            {
+                document.getElementById("mensaje").innerHTML = 
+                    "El mayor de " + a + ", " + b + " y " + c + "es: " + b;
+            } 
+            else if (c >= a && c >= b) 
+            {
+                document.getElementById("mensaje").innerHTML = 
+                    "El mayor de " + a + ", " + b + " y " + c + "es: " + c;
+            }             
+            else //if (a >= b && a >= c) 
+            {
+                document.getElementById("mensaje").innerHTML = 
+                    "Ha sucedido un error inesperado";
+            }
+
+        }
+
+        function miFuncion1() {
+            let a, b, c, x1, x2;
+
+            a = parseFloat(prompt("Por favor, introduce el coeficiente A: "));
+            b = parseFloat(prompt("Por favor, introduce el coeficiente B: "));
+            c = parseFloat(prompt("Por favor, introduce el coeficiente C: "));
+
+            x1 = (-b + Math.sqrt(b**2 - (4 * a * c))) / (2 * a);
+            x2 = (-b - Math.sqrt(b**2 - (4 * a * c))) / (2 * a);
+            console.log("El valor de x1 es " + x1)
+            console.log("El valor de x2 es " + x2)
+        
+            document.getElementById("mensaje").innerHTML = 
+
+                "Para esta ecuación de segundo grado: " + a + "x<sup>2</sup> + " + b + "x + " + c + " = 0<br>" +
+                "sus soluciones son:<br>" +
+                "x1 = " + x1 + ".<br>" +
+                "x2 = " + x2;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #imagen {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/8dd92a9059.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 style="text-align: center;">carusel de fotos primer slider</h1>
+<hr>
+<section>
+<img src="imagenes/piscina.jpg"  id="imagen">
+</section>
+
+<button type="button" onclick="primera();"><i class="fa-light fa-backward"></i></button>
+<button type="button" onclick="siguiente();">siguiente</button>
+<button type="button" onclick="play();"><i class="fa-solid fa-play"></i></button>
+<button type="button" onclick="pausa();"><i class="fa-solid fa-pause"></i></button>
+<button type="button" onclick="anterior();"><i class="fa-solid fa-forward-step"></i></button>
+<button type="button" onclick="ultima();"><i class="fa-solid fa-forward-fast"></i></button>
+
+
+
+<script>
+    let fotos = ["boxeo_ring.jpg", 
+                 "piscina.jpg",
+                 "piscina_2.jpg",
+                 "piscina_3.jpg"];
+    let posicion = 0;
+    let intervalo;
+
+
+    
+    function primera() {
+        posicion = 0;
+        document.getElementById("imagen").src = "imagenes/" + fotos[Math.abs(posicion % fotos.length)];
+        console.log(posicion);
+    }
+
+    function siguiente() {
+        posicion++;
+        document.getElementById("imagen").src = "imagenes/" + fotos[Math.abs(posicion % fotos.length)];
+        console.log(posicion)
+    }
+
+    function anterior(){
+            posicion--;
+            document.getElementById("imagen").src = "imagenes/" + fotos[Math.abs(posicion % fotos.length)];
+            console.log(posicion)
+    }
+
+    function ultima() {
+        posicion = fotos.length - 1;
+        document.getElementById("imagen").src = "imagenes/" + fotos[Math.abs(posicion % fotos.length)];
+        console.log(posicion);
+    }
+
+    function play(){
+        intervalo = setInterval(siguiente, 2000);
+    }
+
+    function pausa (){
+        clearInterval(intervalo);
+    }
+</script>
+</body>
+</html>

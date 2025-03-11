@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript primer vector</title>
+
+</head>
+<body>
+    <h1>VECTORES.</h1>
+
+    <hr>
+    <button type="button" onclick="miFuncion();">vector 1 al 10</button>
+    <p id="mensaje"></p>
+    
+    <hr>
+    <button type="button" onclick="miFuncion1();">vector 10 al 1</button>
+    <p id="mensaje1"></p>
+    
+    <hr>
+    <button type="button" onclick="miFuncion2();">vector con cuadrado de su indice</button>
+    <p id="mensaje2"></p>
+    <hr>
+    <br>
+
+    <button type="button" onclick="miFuncion3();">vector con numeros aleatorios</button>
+    <p id="mensaje3"></p>
+    <hr>
+    <br>
+
+    <button type="button" onclick="miFuncion4();">vector con numeros aleatorios</button>
+    <p id="mensaje4"></p>
+    <hr>
+    <br>
+
+
+    <script>
+        function miFuncion() {  /*imprime los numeros del 1 al 10*/
+            const num = []
+          
+        for(i = 0; i < 10 ;i++)
+            num[i] = i + 1;
+   
+            document.getElementById("mensaje").innerHTML = num;
+            }
+        
+        function miFuncion1(){  /*imprime los numeros del 10 al 1*/
+            const num1 = []
+
+            for(i = 0; i < 10 ;i++)
+            num1[i] = 10 - i;
+        
+            document.getElementById("mensaje1").innerHTML = num1;
+        }
+
+        function miFuncion2(){  /*imprime el vector con su cuadrado de indice*/  
+            const long = 25;
+            const num2 = []
+
+            for(i = 0; i < 10; i++)
+            num2 [i] = i * i;
+            num2 [i] = i ** i;
+            num2 [i] = Math.pow(i, 2);
+            
+            document.getElementById("mensaje2").innerHTML = num2;
+        }   
+            
+        function miFuncion3() {  /*imprime 100 numemeros aleatorios*/
+    const tam = 1000;
+    const num3 = [];
+
+    for(let i = 0; i < tam; i++) {
+        num3[i] = parseInt(Math.random() * 100 + 1);
+    }
+
+    document.getElementById("mensaje3").innerHTML = num3;
+}
+
+        function miFuncion4() {  /*imprime 100 numemeros aleatorios y nos saca el mayor y el menor*/
+    const tam = 100;
+    const num3 = [];
+    let mensaje
+    
+
+    for(let i = 0; i <tam; i++) {
+        num3[i] = parseInt(Math.random() * 100 + 1);
+    }
+
+    let mayor = num3[0];
+    let menor = num3[0];
+
+    for(let i = 1; i < tam; i++) {
+        if (num3[i] > mayor) {
+            mayor = num3[i];
+        }
+        if (num3[i] < menor) {
+            menor = num3[i];
+        }
+    }
+
+    document.getElementById("mensaje4").innerHTML = "El numero mayor es: " + mayor + "<br>" + "El numero menor es: " + menor;
+}
+            
+        
+    </script>
+</body>
+</html>

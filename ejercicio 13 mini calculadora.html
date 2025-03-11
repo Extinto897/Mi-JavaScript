@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje">,,</p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+        let peticion = prompt("¿Qué deseas hacer? suma, resta, multiplicacion, division");
+        let n1 =parseFloat(prompt("introduce el primer numero:"));
+        let n2 =parseFloat(prompt("introduce el segundo numero:"));
+
+
+        let resultado;
+        if (peticion === 'suma') {
+            resultado = n1 + n2;
+        } else if (peticion === 'resta') {
+            resultado = n1 - n2;
+        } 
+        else if (peticion === 'multiplicacion') {
+            resultado = n1 * n2;
+        } 
+        else if (peticion === 'division') {
+            resultado = n1 / n2;
+        } 
+        else {
+            resultado = 'Operación no válida';
+        }
+        document.getElementById("mensaje").innerHTML = "El resultado es: " + resultado;        
+
+              }
+        
+    </script>
+
+</body>
+</html>

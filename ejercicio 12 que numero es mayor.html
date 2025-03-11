@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="mensaje">,,</p>
+    <button type="button" onclick="miFuncion();">Pincha aquí!! :D</button>
+
+    <script>
+        function miFuncion() {
+
+        let a = parseFloat(prompt("porfavor Introduce el primer numero:"));
+        let b = parseFloat(prompt("porfavor Introduce el segundo numero:"));
+        let c = parseFloat(prompt("porfavor Introduce el tercer numero:"));
+
+        if (a >= b && a >= c) {
+            document.getElementById("mensaje").innerHTML = "El numero mayor es " + a;
+        }
+        
+        else if (b >= a && b >= c) {
+            document.getElementById("mensaje").innerHTML = "El numero mayor es " + b;
+        }
+
+        else if (c >= a && c >= b) {
+            document.getElementById("mensaje").innerHTML = "El numero mayor es " + c;
+        } 
+
+        
+              }
+        
+    </script>
+
+</body>
+</html>

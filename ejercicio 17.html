@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 17: programa que muestra los números del 1 al 100.</h1>
+    <hr>
+    <button type="button" onclick="miFuncion()">Calcula la fcatura</button>
+    <p id="mensaje"></p>
+    <script>
+        function miFuncion() {
+            let mensaje = "", i;
+
+            i = 1;
+
+             while(i <= 100){
+                mensaje += i + "<br>";
+                i++;}
+           
+        document.getElementById("mensaje").innerHTML = mensaje;
+        }
+        
+
+    </script>
+</body>
+</html>
